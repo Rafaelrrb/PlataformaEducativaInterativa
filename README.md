@@ -1,0 +1,1 @@
+## Dentro das subpastas 'web' e 'api', há READMEs que recomendo que você verifique, pois contém comandos que vão ajudá-lo a clonar e executar o projeto na sua máquina. Além disso, sugiro começar a configuração pela pasta 'api'.
