@@ -23,8 +23,9 @@ export default function LoginForm() {
       
       const decodedToken = jwt.decode(response.data.access_token) as JwtPayload | null;
 
-      localStorage.setItem("token", response.data.access_token);
-
+      if (typeof window !== "undefined") {
+        localStorage.setItem("token", response.data.access_token);
+      }
       router.push(`/${decodedToken?.role}`);
 
     } catch (error) {

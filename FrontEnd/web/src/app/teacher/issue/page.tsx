@@ -10,9 +10,9 @@ export  default function Issue(){
   const [statement, setStatement] = useState('');
   const [answerOptions, setAnswerOptions] = useState('');
   const [correctAnswer, setCorrectAnswer] = useState('');
-  const token = localStorage.getItem("token");
   
- 
+  const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
+
   useEffect(() => {
      
     if (!token) {

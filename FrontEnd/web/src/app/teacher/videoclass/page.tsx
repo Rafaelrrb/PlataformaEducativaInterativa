@@ -11,7 +11,8 @@ export  default function VideoClass(){
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
   const [videoUrl, setVideoUrl] = useState('');
-  const token = localStorage.getItem("token");
+
+  const token = typeof window !== 'undefined' ? localStorage.getItem("token") : null;
 
   useEffect(() => {
      
