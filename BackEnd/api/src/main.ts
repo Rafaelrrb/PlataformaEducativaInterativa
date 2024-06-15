@@ -11,7 +11,7 @@ async function bootstrap() {
   );
 
   app.enableCors({
-    origin: 'https://benevolent-fenglisu-ba4359.netlify.app/', // Permitir acesso a partir deste domínio
+    origin: 'https://benevolent-fenglisu-ba4359.netlify.app', // Permitir acesso a partir deste domínio
     credentials: true, // Permitir credenciais (cookies, cabeçalhos de autenticação) na solicitação
   });
 
