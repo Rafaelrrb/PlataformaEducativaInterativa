@@ -2,11 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "PlataformaEducativaInterativa/BackEnd/api/dist/main.js",
+      "src": "dist/main.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "PlataformaEducativaInterativa/BackEnd/api/dist/main.js" }
+    { 
+      "src": "/(.*)", 
+      "dest": "src/main.ts",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "PATCH"
+      ]
+    }
   ]
 }
