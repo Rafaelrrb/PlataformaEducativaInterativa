@@ -4,7 +4,11 @@ export function Logout(){
   const router = useRouter();
   
   const handleLogout = async ()=>{
-    localStorage.setItem("token", "");
+    if (typeof window !== "undefined") {
+      // código que utiliza localStorage
+      localStorage.setItem("token", "");
+    }
+    
     router.push('/');
   }
   

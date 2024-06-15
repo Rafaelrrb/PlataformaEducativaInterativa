@@ -52,7 +52,11 @@ export default function Student() {
     fetchProfile();
   }, [router]);
 
-  localStorage.setItem("coins", String(profile?.virtualCoins));
+  if (typeof window !== "undefined") {
+    // código que utiliza localStorage
+    localStorage.setItem("coins", String(profile?.virtualCoins));
+  }
+  
 
   return (
     <>
